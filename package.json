@@ -1,5 +1,5 @@
 {
-    "name": "satellite-afternoon.tm2",
+    "name": "satellite-afternoon",
     "version": "1.0.0",
     "description": "Satellite + terrain style for Mapbox Studio",
     "private": true,
