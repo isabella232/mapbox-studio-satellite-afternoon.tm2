@@ -12,6 +12,8 @@
 }
 
 #mapbox_satellite_full,
+#mapbox_satellite_plus,
+#mapbox_satellite_open,
 #mapbox_satellite_watermask  {
   raster-opacity: 1;
   image-filters: scale-hsla( 0.5,0.6, 0.0,0.2, 0.4,0.8, 0,1 );

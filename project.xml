@@ -34,9 +34,23 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>mapbox_satellite_full</StyleName>  </Layer>
 
+<Style name="mapbox_satellite_plus" filter-mode="first" image-filters="scale-hsla(0.5,0.6,0,0.2,0.4,0.8,0,1)">
+  <Rule>
+    <RasterSymbolizer opacity="1" />
+  </Rule>
+</Style>
 <Layer name="mapbox_satellite_plus"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
+    <StyleName>mapbox_satellite_plus</StyleName>  </Layer>
+
+<Style name="mapbox_satellite_open" filter-mode="first" image-filters="scale-hsla(0.5,0.6,0,0.2,0.4,0.8,0,1)">
+  <Rule>
+    <RasterSymbolizer opacity="1" />
+  </Rule>
+</Style>
+<Layer name="mapbox_satellite_open"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>mapbox_satellite_open</StyleName>  </Layer>
 
 <Style name="mapbox_satellite_watermask" filter-mode="first" image-filters="scale-hsla(0.5,0.6,0,0.2,0.4,0.8,0,1)">
   <Rule>
