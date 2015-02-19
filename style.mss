@@ -16,17 +16,41 @@
 #mapbox_satellite_open,
 #mapbox_satellite_watermask  {
   raster-opacity: 1;
-  image-filters: scale-hsla( 0.5,0.6, 0.0,0.2, 0.4,0.8, 0,1 );
+  image-filters: scale-hsla( 0.5,0.6, 0.0,0.2, 0.3,0.7, 0,1 );
 }
 
-// Southern Hemisphere:
+////////////////////////////////////////////////
+// Hillshading //
+////////////////////////////////////////////////
+
 #hillshade {
-  comp-op: overlay;
-  polygon-opacity: 0.5;
-  [class='medium_shadow'] { polygon-fill: #46a; }
-  [class='full_shadow'] { polygon-fill: #246; }
-  [class='medium_highlight'] { polygon-fill: #ea8; }
-  [class='full_highlight'] { polygon-fill: #fea; }
+  ::0[zoom<=13],
+  ::1[zoom=14],
+  ::2[zoom>=15][zoom<=16],
+  ::3[zoom>=17][zoom<=18],
+  ::4[zoom>=19] {
+    comp-op: overlay;
+    polygon-clip: false;
+    image-filters-inflate: true;
+    [class='shadow'] {
+      polygon-fill: #246;
+      polygon-opacity: 0.3;
+      [zoom>=15][zoom<=16] { polygon-opacity: 0.075; }
+      [zoom>=17][zoom<=18] { polygon-opacity: 0.05; }
+      [zoom>=18] { polygon-opacity: 0.025; }
+    }
+    [class='highlight'] {
+      polygon-fill: #ea8;
+      polygon-opacity: 0.4;
+      [zoom>=15][zoom<=16] { polygon-opacity: 0.3; }
+      [zoom>=17][zoom<=18] { polygon-opacity: 0.2; }
+      [zoom>=18] { polygon-opacity: 0.1; }
+    }
+  }
+  ::1 { image-filters: agg-stack-blur(2,2); }
+  ::2 { image-filters: agg-stack-blur(4,4); }
+  ::3 { image-filters: agg-stack-blur(20,20); }
+  ::4 { image-filters: agg-stack-blur(20,20); }
 }
 
 #admin[admin_level=2] {
