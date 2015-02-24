@@ -12,7 +12,7 @@
   text-halo-fill: fadeout(darken(@water,10),95);
   text-halo-radius: 3;
   text-halo-rasterizer: fast;
-  [zoom>=3] {
+  [zoom>=2] {
     text-size: 10;
     [scalerank<=6] { text-size: 12; }
     [scalerank<=4] { text-size: 14; }
@@ -34,7 +34,7 @@
 
 // City labels with dots for low zoom levels.
 // The separate attachment keeps the size of the XML down.
-#place_label::citydots[zoom>=4][localrank<=2] {
+#place_label::citydots[zoom>=4][localrank<=1] {
   // explicitly defining all the `ldir` values wer'e going
   // to use shaves a bit off the final project.xml size
   [ldir='N'],[ldir='S'],[ldir='E'],[ldir='W'],

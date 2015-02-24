@@ -10,9 +10,9 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - -98.96484375
-  - 36.20882309283712
-  - 4
+  - -108.9624
+  - 39.2833
+  - 6
 description: ''
 format: jpeg95
 interactivity_layer: ''
@@ -20,7 +20,7 @@ layers: null
 maxzoom: 22
 minzoom: 0
 name: Satellite Afternoon
-source: "mapbox:///mapbox.satellite,mapbox.mapbox-terrain-v1,mapbox.mapbox-streets-v5"
+source: "mapbox:///mapbox.satellite,mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v6"
 styles: 
   - style.mss
   - labels.mss
