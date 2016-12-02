@@ -2,5 +2,9 @@
   "name": "@mapbox/mapbox-studio-satellite-afternoon",
   "version": "2.0.3",
   "description": "Satellite + terrain style for Mapbox Studio",
-  "main": "./package.json"
+  "main": "./package.json",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mapbox/mapbox-studio-satellite-afternoon.tm2.git"
+  }
 }
